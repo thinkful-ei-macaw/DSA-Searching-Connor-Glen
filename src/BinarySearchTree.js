@@ -5,6 +5,7 @@ export default class BinarySearchTree {
         this.parent = parent;
         this.left = null;
         this.right = null;
+
     }
 
 
@@ -65,25 +66,21 @@ export default class BinarySearchTree {
 
     }
 
-    preOrder() {
 
-        console.log(this.key)
+    postOrder() {
+
+
         if (this.left) {
-            this.left.preOrder()
+            this.left.postOrder()
+
         }
 
         if (this.right) {
-            this.right.preOrder();
+            this.right.postOrder();
+
         }
-        // if (key === this.key) {
-        //     console.log(this.value)
-        // }
-        // if (this.left.key < this.key) {
-        //     console.log(this.left.value)
-        //     this.preOrder()
-        // }
 
-
+        console.log(this.value)
 
     }
 
